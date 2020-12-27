@@ -35,11 +35,11 @@ function setup(){
     log4 = new Log(760,120,150, PI/7);
     log5 = new Log(870,120,150, -PI/7);
     //PI = 180 degrees
-    log6 = new Log(400, 120, 50, PI/2);
+    //log6 = new Log(400, 120, 50, PI/2);
 
-    bird = new Bird(100,100);
+    bird = new Bird(200,80);
 
-    constrainedBody = new Constraint(bird.body , log6.body);
+    constrainedBody = new Slingshot(bird.body , { x: 200, y:80});
 
 }
 
@@ -63,7 +63,7 @@ function draw(){
     box5.display();
     log4.display();
     log5.display();
-    log6.display();
+   
 
     //function call
     constrainedBody.display();

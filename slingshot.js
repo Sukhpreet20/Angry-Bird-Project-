@@ -1,9 +1,9 @@
-class Constraint{
+class Slingshot{
     //properties
-    constructor(bird, log){
+    constructor(bird, point){
         var options = {
             bodyA:bird,
-            bodyB: log, 
+            pointB: point, 
             length: 2,
             stiffness: 0.04
         }
@@ -16,7 +16,7 @@ class Constraint{
     display(){
 
         var pointA = this.body.bodyA.position;// bird body's position
-        var pointB = this.body.bodyB.position;// log6 body's position
+        var pointB = this.body.pointB;// point body's position
 
         push ();
         strokeWeight(4);
